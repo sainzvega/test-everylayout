@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="./Box/Box.css" />
+    <link rel="stylesheet" type="text/css" href="./Stack/Stack.css" />
+    <link rel="stylesheet" type="text/css" href="./Sidebar/Sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="./Center/Center.css" />
+    <title>Every-Layout Test</title>
+    <script src="./Box/Box.js" type="module"></script>
+    <script src="./Stack/Stack.js" type="module"></script>
+    <script src="./Sidebar/Sidebar.js" type="module"></script>
+    <script src="./Center/Center.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Stack and Box</h1>
+        <stack-l>
+          <p>This is first</p>
+          <p>This is second</p>
+          <p>This is third</p>
+          <box-l>
+            <h3>This is a box</h3>
+            <p>That contains some other content we want to delineate</p>
+          </box-l>
+          <p>This is fourth</p>
+          <p>This is fifth</p>
+          <p>This is sixth</p>
+        </stack-l>
+      </section>
+      <hr />
+      <section>
+        <sidebar-l side="right" contentmin="50%" space="0">
+          <form>
+            <input type="text" />
+            <button type="button">Search</button>
+          </form>
+        </sidebar-l>
+      </section>
+      <hr />
+      <section>
+        <h1>Sidebar/Stack/Center</h1>
+        <sidebar-l contentmin="50%" space="0">
+          <div>
+            <aside style="border: 1px solid red">
+              <stack-l recursive="true">
+                <ul>
+                  <li>FirstLink</li>
+                  <li>SecondLink</li>
+                  <li>ThirdLink</li>
+                  <li>FourthLink</li>
+                </ul>
+              </stack-l>
+            </aside>
+            <section style="border: 1px solid blue">
+              <center-l>
+                <stack-l>
+                  <h4>Some Link you selected</h4>
+                  <p>this is Where the main content goes</p>
+                  <p>this is Where the main content goes</p>
+                  <p>this is Where the main content goes</p>
+                  <p>this is Where the main content goes</p>
+                  <p>this is Where the main content goes</p>
+                  <p>this is Where the main content goes</p>
+                  <p>this is Where the main content goes</p>
+                </stack-l>
+              </center-l>
+            </section>
+          </div>
+        </sidebar-l>
+      </section>
+    </main>
+  </body>
+</html>
